@@ -1,0 +1,78 @@
+<html>
+    <head>
+        <script
+            type="text/javascript"
+            src="../js/jquery-1.4.2.min.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shCore.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushJScript.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushPhp.js">
+        </script>
+        <script
+            type="text/javascript"
+            src="../syntax_highlighter/scripts/shBrushXml.js">
+        </script>
+        <link
+            href="../syntax_highlighter/styles/shCore.css" rel="stylesheet"
+            type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shCoreEclipse.css"
+            rel="stylesheet" type="text/css"
+        />
+        <link
+            href="../syntax_highlighter/styles/shThemeWordpress.css"
+            rel="stylesheet" type="text/css"
+        />
+    </head>
+    <body>
+        <pre class="brush: php">&lt;?php
+/**
+ * Created by PhpStorm.
+ * @author: Kemoy Campbell
+ * Date: 5/20/16
+ * Time: 12:49 PM
+ * @version 1.5
+ */
+
+namespace BlockBruteForce
+{
+	/*----------------------------------------------------------
+    THIS IS THE CONFIGURATION OF THE DATABASE
+    SET UP THE VARIABLE ACCORDING TO YOUR DATABASE CONFIGURATION
+*/
+
+	//change those to your database configuration
+	$dbname='default'; //replace with your database name or we will create 'brute_force_login_attempts' database for you
+	$dbusername='root';//database username
+	$dbpassword='';//database password
+	$host ='localhost';//database host
+
+	//configuration for development environment
+	$maxAttempt = 4;
+	$blockTime = 10; //block for 10 minutes
+	$sandbox = true;
+	$debugEnable = true;
+
+
+
+	//STOP! DO NOT MODIFY THOSE LINES BELOW
+	$config = array('dbname'=&gt;$dbname,'dbusername'=&gt;$dbusername,'dbpassword'=&gt;$dbpassword,'host'=&gt;$host);
+	$dev  = array('sandbox'=&gt;$sandbox,'maxAttempt'=&gt;$maxAttempt,'blockTime'=&gt;$blockTime,'debugEnable'=&gt;$debugEnable);
+}</pre>
+        <script type="text/javascript">
+             SyntaxHighlighter.all();
+             jQuery('.gutter div').each(function(key, data){
+                jQuery(data).prepend('<a name="L'+jQuery(data).text()+'"/>');
+             });
+        </script>
+    </body>
+</html>

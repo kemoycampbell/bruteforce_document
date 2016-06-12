@@ -1,0 +1,538 @@
+<?xml version="1.0" encoding="utf-8"?>
+<project title="API Documentation" version="2.8.5">
+  <partials/>
+  <file path="BlockBruteForce.php" generated-path="BlockBruteForce.html" hash="b5030bbfd89e5af3bfd75c1ce31df81c" package="Default">
+    <docblock line="0">
+      <description>Created by PhpStorm.</description>
+      <long-description>User: Kemoy Cambpell</long-description>
+      <tag name="version" line="0" description="1.5 Date: 6/9/16&#10;Time: 1:32 PM"/>
+      <tag name="package" line="0" description="Default"/>
+    </docblock>
+    <class final="false" abstract="false" namespace="BlockBruteForce" line="13" package="Default">
+      <extends/>
+      <name>BlockBruteForce</name>
+      <full_name>\BlockBruteForce\BlockBruteForce</full_name>
+      <docblock line="13">
+        <description></description>
+        <long-description></long-description>
+        <tag name="package" line="13" description="Default"/>
+      </docblock>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="16" package="Default">
+        <name>$dbname</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::dbname</full_name>
+        <default></default>
+        <docblock line="16">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="17" package="Default">
+        <name>$dbusername</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::dbusername</full_name>
+        <default></default>
+        <docblock line="17">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="18" package="Default">
+        <name>$dbpassword</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::dbpassword</full_name>
+        <default></default>
+        <docblock line="18">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="19" package="Default">
+        <name>$host</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::host</full_name>
+        <default></default>
+        <docblock line="19">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="20" package="Default">
+        <name>$msg</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::msg</full_name>
+        <default>null</default>
+        <docblock line="20">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="21" package="Default">
+        <name>$connected</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::connected</full_name>
+        <default>false</default>
+        <docblock line="21">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="22" package="Default">
+        <name>$PDO</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::PDO</full_name>
+        <default></default>
+        <docblock line="22">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="23" package="Default">
+        <name>$defaultDatabase</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::defaultDatabase</full_name>
+        <default>'brute_force_login_attempts'</default>
+        <docblock line="23">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="24" package="Default">
+        <name>$dump</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::dump</full_name>
+        <default>array()</default>
+        <docblock line="24">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="25" package="Default">
+        <name>$sql</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::sql</full_name>
+        <default>'kemoybrute_force_login_attempts.sql'</default>
+        <docblock line="25">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="26" package="Default">
+        <name>$sandbox</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::sandbox</full_name>
+        <default>true</default>
+        <docblock line="26">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="27" package="Default">
+        <name>$blockTime</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::blockTime</full_name>
+        <default>10</default>
+        <docblock line="27">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="28" package="Default">
+        <name>$blockAttempts</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::blockAttempts</full_name>
+        <default>4</default>
+        <docblock line="28">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <property static="false" visibility="private" namespace="BlockBruteForce" line="29" package="Default">
+        <name>$debugEnable</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::debugEnable</full_name>
+        <default>true</default>
+        <docblock line="29">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+      </property>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="40" package="Default">
+        <name>__construct</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::__construct()</full_name>
+        <docblock line="40">
+          <description>BlockBruteForce constructor. The constructor takes the array config data and initalize
+the necessary variables such as hostname, username, password. Supplying database name is
+optional. If a database name is not supplied, a database namely brute_force_login_attempts
+will be automatically created</description>
+          <long-description></long-description>
+          <tag name="param" line="40" description="&lt;ul&gt;&#10;&lt;li&gt;config is an array with the necessary parameters to connect to the host mysql server&#10;The format is as follow array('dbname'=&gt;$dbname,'dbusername'=&gt;$dbusername,'dbpassword'=&gt;$dbpassword,'host'=&gt;$host)&lt;/li&gt;&#10;&lt;/ul&gt;" type="null" variable="$config">
+            <type>null</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$config</name>
+          <default>null</default>
+          <type>null</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="84" package="Default">
+        <name>setBlockTime</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::setBlockTime()</full_name>
+        <docblock line="84">
+          <description>This method is used to setup the block time. By the the block time is set to 10 minutes.</description>
+          <long-description></long-description>
+          <tag name="param" line="84" description="&lt;ul&gt;&#10;&lt;li&gt;desired block time in whole number&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$time"/>
+          <tag name="return" line="84" description="a stdclass object is return if an error occurs" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$time</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="115" package="Default">
+        <name>setEnableDebug</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::setEnableDebug()</full_name>
+        <docblock line="115">
+          <description>This method is use to set the debug flag. The parameter must be a boolean true or false</description>
+          <long-description></long-description>
+          <tag name="param" line="115" description="&lt;ul&gt;&#10;&lt;li&gt;either true or false&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$bool"/>
+          <tag name="return" line="115" description="- return stdclass object if there are any error" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bool</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="139" package="Default">
+        <name>setBlockAttempts</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::setBlockAttempts()</full_name>
+        <docblock line="139">
+          <description>This method is used to set the max attempts allowed.</description>
+          <long-description></long-description>
+          <tag name="param" line="139" description="&lt;ul&gt;&#10;&lt;li&gt;the max attempts allowed in whole number&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$max"/>
+          <tag name="return" line="139" description="-  a stdclass object is return if an error occurs" type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$max</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="173" package="Default">
+        <name>setSandbox</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::setSandbox()</full_name>
+        <docblock line="173">
+          <description>This method is used to indicate whether a developer is using the localhost for the development.</description>
+          <long-description>The reason for this is to assist with get ip and return it as 127.0.0.1 when using localhost machine.
+By default the sandbox is set as true</long-description>
+          <tag name="param" line="173" description="&lt;ul&gt;&#10;&lt;li&gt;a true or false whether to enable sandbox. Should be off when in production&lt;/li&gt;&#10;&lt;/ul&gt;" type="boolean" variable="$bool">
+            <type>boolean</type>
+          </tag>
+          <tag name="return" line="173" description="- return stdclass object if there are any issues." type="\stdClass">
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bool</name>
+          <default>true</default>
+          <type>boolean</type>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="202" package="Default">
+        <name>connect</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::connect()</full_name>
+        <docblock line="202">
+          <description>This method used the config data supplied in the constructor and attempts to connect to the
+mysql server. If the connection was not successful then a stdclass is returned detailing the error.</description>
+          <long-description>If the connection was successful a true is return.</long-description>
+          <tag name="return" line="202" description="- return true if the connection was successful otherwise a stdclass object with a detailed&#10;info about the error" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="262" package="Default">
+        <name>connectionStatus</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::connectionStatus()</full_name>
+        <docblock line="262">
+          <description>This method returns the connection status. If the connection has
+been successful established then true is return otherwise a stdclass
+with the status(header code 400) and error</description>
+          <long-description></long-description>
+          <tag name="return" line="262" description="- return true if the connection is established otherwise&#10;return stdClass containing the status code and error message." type="boolean|\BlockBruteForce\stdClass">
+            <type>boolean</type>
+            <type>\BlockBruteForce\stdClass</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="289" package="Default">
+        <name>readSql</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::readSql()</full_name>
+        <docblock line="289">
+          <description>This method is used to read the sql file into the table. If the file was successful read
+then a true is return otherwise stdclass object with the error info</description>
+          <long-description></long-description>
+          <tag name="param" line="289" description="&lt;ul&gt;&#10;&lt;li&gt;the file that contains the sql with the necessary fields for the blockbruteforce&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$file"/>
+          <tag name="return" line="289" description="- return true if successful read otherwise stdclass object" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$file</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="324" package="Default">
+        <name>loadDependencyDatabase</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::loadDependencyDatabase()</full_name>
+        <docblock line="324">
+          <description>This method is a put together of both createDatabase and readSql methods in order to load all necessary database
+and tables with the required fields for the blockbruteforce</description>
+          <long-description></long-description>
+          <tag name="return" line="324" description="- return false if failure occurs otherwise true" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="354" package="Default">
+        <name>updateAttempts</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::updateAttempts()</full_name>
+        <docblock line="354">
+          <description>This method is used to update the number of attempts the user has made. We only use this method if the
+user has made previous failed attempt. If the update was successful then true is return and false if nothing to update.</description>
+          <long-description>a stdclass is return if any errors occurs</long-description>
+          <tag name="param" line="354" description="&lt;ul&gt;&#10;&lt;li&gt;the name of the user whose attempts to update&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="354" description="- return true if the update was successful, false if nothing was update and stdclass object if&#10;any errors occurs" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="429" package="Default">
+        <name>verifyUsernameParameter</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::verifyUsernameParameter()</full_name>
+        <docblock line="429">
+          <description>This method is used to ensure that the username parameter is supplied</description>
+          <long-description></long-description>
+          <tag name="param" line="429" description="&lt;ul&gt;&#10;&lt;li&gt;the username parameter&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="429" description="- return true if supplied stdclass object otherwise" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="455" package="Default">
+        <name>getLastLoginAttempt</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::getLastLoginAttempt()</full_name>
+        <docblock line="455">
+          <description>This method is used to fetch the user's last login attempt from the database. We first check to ensure that
+the username is supplied. Further we ensure that the database connection is established. If we were able to find the
+user's last attempt in the database, the resultset is return, false if no data was found. A stdclass object is return if any error
+were occurs</description>
+          <long-description></long-description>
+          <tag name="param" line="455" description="&lt;ul&gt;&#10;&lt;li&gt;the username to check for last login attempt&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="455" description="- resultset is returned if the result was found, false if nothing was found and stdclass object if any errors occurs" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="514" package="Default">
+        <name>deleteRecord</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::deleteRecord()</full_name>
+        <docblock line="514">
+          <description>This method is used to delete an existing record from the database. The record are only removed
+if the time elapse is &gt;= block time that is defined by the developer</description>
+          <long-description></long-description>
+          <tag name="param" line="514" description="&lt;ul&gt;&#10;&lt;li&gt;the username to delete the record for&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="514" description="- return true if successful delete, false if nothing to delete and stdclass object if any errors" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="594" package="Default">
+        <name>getMinuteElapse</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::getMinuteElapse()</full_name>
+        <docblock line="594">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$lastAttempt</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="647" package="Default">
+        <name>isBlock</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::isBlock()</full_name>
+        <docblock line="647">
+          <description></description>
+          <long-description></long-description>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="758" package="Default">
+        <name>registerFailedLogin</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::registerFailedLogin()</full_name>
+        <docblock line="758">
+          <description>This method is used to register a failed attempts for a particular user in the database.</description>
+          <long-description>We log the following fields, username, ip address, action time and attempts as 1</long-description>
+          <tag name="param" line="758" description="&lt;ul&gt;&#10;&lt;li&gt;the username to register the failed attempt for&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="758" description="return true if the data was registered, false if not and stdclass if an error occurs" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="793" package="Default">
+        <name>get_ip_address</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::get_ip_address()</full_name>
+        <docblock line="793">
+          <description>This method is used to get the ip of the user</description>
+          <long-description></long-description>
+          <tag name="return" line="793" description="- return stdclass if an error occurs. false if we are not able to get the address. otherwise the ip&#10;is returned" type="\BlockBruteForce\stdClass|boolean|string">
+            <type>\BlockBruteForce\stdClass</type>
+            <type>boolean</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="822" package="Default">
+        <name>trim</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::trim()</full_name>
+        <docblock line="822">
+          <description>This method is used to trim the ip address</description>
+          <long-description></long-description>
+          <tag name="param" line="822" description="&lt;ul&gt;&#10;&lt;li&gt;the ip address to trim&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$ip"/>
+          <tag name="return" line="822" description="- stdclass if an error occurs otherwise the trimmed ip address is returned" type="\BlockBruteForce\stdClass|string">
+            <type>\BlockBruteForce\stdClass</type>
+            <type>string</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$ip</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="851" package="Default">
+        <name>validate_ip</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::validate_ip()</full_name>
+        <docblock line="851">
+          <description>This method is used to validate the ip address</description>
+          <long-description></long-description>
+          <tag name="param" line="851" description="&lt;ul&gt;&#10;&lt;li&gt;the ip address to validate&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$ip"/>
+          <tag name="return" line="851" description="- return true if verified and false if otherwise" type="boolean">
+            <type>boolean</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$ip</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="865" package="Default">
+        <name>youMayLoginAgainIn</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::youMayLoginAgainIn()</full_name>
+        <docblock line="865">
+          <description>If a user is block, this method is used to state how many minutes before the user may login again</description>
+          <long-description></long-description>
+          <tag name="param" line="865" description="&lt;ul&gt;&#10;&lt;li&gt;the username of the user we want to notify when can login again&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$username"/>
+          <tag name="return" line="865" description="- false if any user not found, stdclass if any errors and lastly the minutes before&#10;the user can login again is returned" type="boolean|integer|\stdClass">
+            <type>boolean</type>
+            <type>integer</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$username</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="905" package="Default">
+        <name>createDatabase</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::createDatabase()</full_name>
+        <docblock line="905">
+          <description>This method is used to create a database for the blockbruteforce if the user leave the database configuration in its
+default state in the config.php</description>
+          <long-description></long-description>
+          <tag name="return" line="905" description="- true if the database was created, false if not and stdclass object if an error occurs" type="boolean|\stdClass">
+            <type>boolean</type>
+            <type>\stdClass</type>
+          </tag>
+        </docblock>
+      </method>
+      <method final="false" abstract="false" static="false" visibility="public" namespace="BlockBruteForce" line="956" package="Default">
+        <name>outputDebug</name>
+        <full_name>\BlockBruteForce\BlockBruteForce::outputDebug()</full_name>
+        <docblock line="956">
+          <description>This method is used to occurs in the program. The user can enable or disable by supplying a boolean statement
+as the parameter</description>
+          <long-description></long-description>
+          <tag name="param" line="956" description="&lt;ul&gt;&#10;&lt;li&gt;true to print the output and false othewise&lt;/li&gt;&#10;&lt;/ul&gt;" type="" variable="$bool"/>
+        </docblock>
+        <argument line="0" by_reference="false">
+          <name>$bool</name>
+          <default></default>
+          <type/>
+        </argument>
+      </method>
+    </class>
+    <parse_markers>
+      <error line="13" code="PPC:ERR-50005">No summary for class \BlockBruteForce\BlockBruteForce</error>
+      <error line="594" code="PPC:ERR-50015">Argument $lastAttempt is missing from the Docblock of getMinuteElapse</error>
+      <error line="594" code="PPC:ERR-50008">No summary for method getMinuteElapse()</error>
+      <error line="647" code="PPC:ERR-50015">Argument $username is missing from the Docblock of isBlock</error>
+      <error line="647" code="PPC:ERR-50008">No summary for method isBlock()</error>
+      <error line="16" code="PPC:ERR-50007">No summary for property $dbname</error>
+      <error line="17" code="PPC:ERR-50007">No summary for property $dbusername</error>
+      <error line="18" code="PPC:ERR-50007">No summary for property $dbpassword</error>
+      <error line="19" code="PPC:ERR-50007">No summary for property $host</error>
+      <error line="20" code="PPC:ERR-50007">No summary for property $msg</error>
+      <error line="21" code="PPC:ERR-50007">No summary for property $connected</error>
+      <error line="22" code="PPC:ERR-50007">No summary for property $PDO</error>
+      <error line="23" code="PPC:ERR-50007">No summary for property $defaultDatabase</error>
+      <error line="24" code="PPC:ERR-50007">No summary for property $dump</error>
+      <error line="25" code="PPC:ERR-50007">No summary for property $sql</error>
+      <error line="26" code="PPC:ERR-50007">No summary for property $sandbox</error>
+      <error line="27" code="PPC:ERR-50007">No summary for property $blockTime</error>
+      <error line="28" code="PPC:ERR-50007">No summary for property $blockAttempts</error>
+      <error line="29" code="PPC:ERR-50007">No summary for property $debugEnable</error>
+    </parse_markers>
+    <source>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</source>
+  </file>
+  <package name="Default" full_name="Default"/>
+  <package name="global" full_name="global"/>
+  <namespace name="BlockBruteForce" full_name="BlockBruteForce"/>
+  <deprecated count="0"/>
+</project>
